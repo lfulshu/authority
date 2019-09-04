@@ -3,6 +3,9 @@ package com.lz.common;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @Author liizzz
  * @Data 2019/9/4 22:12
@@ -39,4 +42,14 @@ public class JsonData {
         return jsonData;
     }
 
+    /**
+     * 把 JsonData 的属性值封装成一个MAP
+     */
+    public Map<String, Object> toMap(){
+        HashMap<String, Object> result = new HashMap<>();
+        result.put("ret", ret);
+        result.put("msg", msg);
+        result.put("data", data);
+        return result;
+    }
 }

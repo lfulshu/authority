@@ -1,5 +1,6 @@
 package com.lz.controller;
 
+import com.lz.common.JsonData;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,11 +15,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Slf4j
 public class TestController {
 
-    @RequestMapping(value = "hello")
+    @RequestMapping(value = "hello.json")
     @ResponseBody
-    public String hello(){
+    public JsonData hello(){
         log.info("hello");
-        return "halo authority";
+        return JsonData.success("halo authority");
     }
 
 }
